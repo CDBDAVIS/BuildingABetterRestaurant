@@ -80,10 +80,10 @@ class Radius {
         vis.svg = d3.select("." + vis.parentElement).append("svg")
             .attr("width", vis.width)
             .attr("height", vis.height)
-            .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
+            .attr('transform', `translate (${vis.margin.left} , ${vis.margin.top * 2} )`);
 
         vis.r = d3.scaleLinear()
-            .range([10, vis.height/2 - vis.margin.top]);
+            .range([10, vis.height/2]);
 
         vis.colorScale = d3.scaleOrdinal()
             .domain([1,2,3,4,5])
